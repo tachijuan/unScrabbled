@@ -15,11 +15,14 @@ int maxwordsize;
     UITextField *tiles;
     UITextField *regexstring;
     IBOutlet UISlider *maxWordLengthSlider;
+    IBOutlet UILabel *maxWordLabel;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *tiles;
 @property (nonatomic, retain) IBOutlet UITextField *regexstring;
+@property (nonatomic, retain) IBOutlet UISlider *maxWordLengthSlider;
 
 - (IBAction)doItButton:(id)sender;
+- (IBAction)maxWordLengthSlider:(id)sender;
 
 @end

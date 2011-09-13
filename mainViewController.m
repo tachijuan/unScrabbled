@@ -7,10 +7,22 @@
 //
 
 #import "mainViewController.h"
+#import "TableViewController.h"
+#import "WordsClass.h"
 
 @implementation mainViewController
 @synthesize tiles;
 @synthesize regexstring;
+@synthesize maxWordLengthSlider;
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
+{
+    if ([[segue identifier] isEqualToString:@"showTable"]) {
+        TableViewController *myTableViewController = [segue destinationViewController];
+        myTableViewController.currentword = @"The word is now";
+        myTableViewController.maxwordsize = maxwordsize;
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -61,5 +73,10 @@
 
 - (IBAction)doItButton:(id)sender {
     
+}
+
+- (IBAction)maxWordLengthSlider:(id)sender {
+    maxwordsize = [maxWordLengthSlider value];
+    [maxWordLabel setText:[NSString stringWithFormat:@"%i",maxwordsize]];
 }
 @end

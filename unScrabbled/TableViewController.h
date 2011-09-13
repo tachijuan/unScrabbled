@@ -10,4 +10,7 @@
 
 @interface TableViewController : UITableViewController
 
+@property (retain) NSString *currentword;
+@property int maxwordsize;
+
 @end

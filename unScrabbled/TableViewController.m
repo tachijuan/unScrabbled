@@ -7,8 +7,12 @@
 //
 
 #import "TableViewController.h"
+#import "WordsClass.h"
 
 @implementation TableViewController
+
+@synthesize currentword;
+@synthesize maxwordsize;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -90,7 +94,7 @@
 //        [[cell textLabel] setText:[p description]];
 //    }
 
-    [[cell textLabel] setText:@"Woot!"];
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%@ - %i",currentword,maxwordsize]];
     
     return cell;
 }
