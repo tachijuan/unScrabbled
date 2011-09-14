@@ -92,19 +92,7 @@
         [wordResults sortUsingFunction:sortByLength context:@""];
     }
     
-    // Build the string to show. If we have a reg-ex compare that first. Otherwise, add all the strings we have found
-//    for (WordsClass *currword in wordResults) {
-//        NSString *wordword = [[currword word] lowercaseString];     // get rid of the uppercase we used for wild cards
-//        if ([field2 length]>0) {
-//            range = [wordword rangeOfString:field2 options:NSRegularExpressionSearch];
-//            if (range.location != NSNotFound) {
-//                [string appendString:[NSString stringWithFormat:@"%-15.15@ %i\n",wordword,[currword wordValue]]];
-//            } 
-//        } else {
-//            [string appendString:[NSString stringWithFormat:@"%-15.15@ %i\n",wordword,[currword wordValue]]];
-//        }
-//    }
-    NSLog(@"findmywords finished");
+//    NSLog(@"findmywords finished");
 
 }
 
@@ -129,21 +117,13 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     wordResults = [[NSMutableArray alloc] init];
     [self findMyWords];
-    NSLog(@"dictionary size: %d, words matched:%d",[dictionary count],[wordResults count]);
+//    NSLog(@"dictionary size: %d, words matched:%d",[dictionary count],[wordResults count]);
     self.tableView.rowHeight=25;
 }
 
@@ -169,7 +149,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 //    return [possesions count];
-    return [wordResults count];
+    return [wordResults count]+1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -186,8 +166,13 @@
     }
     
     NSInteger row = indexPath.row;
-    cell.textLabel.text = [[[wordResults objectAtIndex:row] word] lowercaseString];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%i",[[wordResults objectAtIndex:row] wordValue]];
+    if (row == 0) {
+        cell.textLabel.text = [NSString stringWithFormat:@"Words (total:%d)",[wordResults count]];
+        cell.detailTextLabel.text =@"Value";
+    } else {
+        cell.textLabel.text = [[[wordResults objectAtIndex:row-1] word] lowercaseString];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%i",[[wordResults objectAtIndex:row-1] wordValue]];
+    }
     
 //    CGRect frame = cell.accessoryView.bounds;
 //    UILabel *myLabel = [[UILabel alloc] initWithFrame:frame];
