@@ -66,15 +66,15 @@
     
     NSString *ourHome = NSHomeDirectory();
     NSString *wordsFile = [ourHome stringByAppendingPathComponent:@"unScrabbled.app/enable1.txt"];
-    NSLog(@"Path: %@",wordsFile);
+//    NSLog(@"Path: %@",wordsFile);
     
     myfile = fopen([wordsFile UTF8String], "r");
     while (fgets(readword,sizeof(readword),myfile)) {
         [dictionary addObject:[[NSString alloc] initWithUTF8String:readword]];
         //        [dictionary addObject:[[NSString alloc] initWithCString:readword encoding:NSASCIIStringEncoding]];
     }
-
-    NSLog(@"Loaded words: %d",[dictionary count]);    
+    
+//    NSLog(@"Loaded words: %d",[dictionary count]);    
 }
 
 - (void)viewDidUnload
