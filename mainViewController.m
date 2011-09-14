@@ -15,12 +15,15 @@
 @synthesize regexstring;
 @synthesize maxWordLengthSlider;
 
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
 {
     if ([[segue identifier] isEqualToString:@"showTable"]) {
         TableViewController *myTableViewController = [segue destinationViewController];
-        myTableViewController.currentword = @"The word is now";
+        myTableViewController.currentword = [tiles text];
+        myTableViewController.regexpattern = [regexstring text];
         myTableViewController.maxwordsize = maxwordsize;
+        myTableViewController.dictionary = dictionary;
     }
 }
 
@@ -50,13 +53,29 @@
 }
 */
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    maxwordsize = [maxWordLengthSlider value];
+    
+    dictionary = [[NSMutableArray alloc] init];
+    
+    FILE *myfile;
+    char readword[50];
+    
+    NSString *ourHome = NSHomeDirectory();
+    NSString *wordsFile = [ourHome stringByAppendingPathComponent:@"unScrabbled.app/enable1.txt"];
+    NSLog(@"Path: %@",wordsFile);
+    
+    myfile = fopen([wordsFile UTF8String], "r");
+    while (fgets(readword,sizeof(readword),myfile)) {
+        [dictionary addObject:[[NSString alloc] initWithUTF8String:readword]];
+        //        [dictionary addObject:[[NSString alloc] initWithCString:readword encoding:NSASCIIStringEncoding]];
+    }
+
+    NSLog(@"Loaded words: %d",[dictionary count]);    
 }
-*/
 
 - (void)viewDidUnload
 {
@@ -72,11 +91,16 @@
 }
 
 - (IBAction)doItButton:(id)sender {
+    [regexstring resignFirstResponder];
+    [tiles resignFirstResponder];
     
 }
+
 
 - (IBAction)maxWordLengthSlider:(id)sender {
     maxwordsize = [maxWordLengthSlider value];
     [maxWordLabel setText:[NSString stringWithFormat:@"%i",maxwordsize]];
 }
+
+
 @end

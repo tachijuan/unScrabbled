@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewController : UITableViewController
+NSMutableArray *wordResults;
+
+@interface TableViewController : UITableViewController {
+    IBOutlet UISegmentedControl *sortSelector;
+}
 
 @property (retain) NSString *currentword;
+@property (retain) NSString *regexpattern;
 @property int maxwordsize;
+@property (retain) NSMutableArray *dictionary;
+
+- (IBAction)sortSelectorChanged:(id)sender;
 
 @end

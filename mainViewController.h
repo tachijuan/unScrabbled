@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 int maxwordsize;
+NSMutableArray *dictionary;
 
 @interface mainViewController : UIViewController {
     UIButton *doIt;
@@ -24,5 +25,6 @@ int maxwordsize;
 
 - (IBAction)doItButton:(id)sender;
 - (IBAction)maxWordLengthSlider:(id)sender;
+
 
 @end
