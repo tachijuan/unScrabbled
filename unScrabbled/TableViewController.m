@@ -26,7 +26,7 @@
     NSRange range;                                                  // range used during string compares
     BOOL matchfailed;                                               // YES if a tile is not found in dictionary word
     WordsClass *wordWithValue;
-    int curlength;
+    int curwordlen;
     NSString *curword;
     NSMutableArray *foundWords;
         
@@ -37,13 +37,13 @@
         int matchescount=0;                                         // initialize vars
         matchfailed = YES;                                          // assume we failed until we test for size
         [matchword setString:field1];      
-        curlength = [curword length]-1;                             // calculate real length. need to fix this so word doesn't have null
+        curwordlen = [curword length];                             // get length once to make it easier to read below
         
-        if ((curlength <= [matchword length]) && (curlength <= maxwordsize)) // short circuit big words
+        if ((curwordlen <= [matchword length]) && (curwordlen <= maxwordsize)) // short circuit big words
         {
             matchfailed=NO;                                         // make it cool
             
-            for (int i=0;i<curlength && matchfailed == NO;i++) {   //iterate through each character in the word & see if we find it
+            for (int i=0;i<curwordlen && matchfailed == NO;i++) {   //iterate through each character in the word & see if we find it
                 range=[matchword rangeOfString:[curword substringWithRange:NSMakeRange(i, 1)] options:NSCaseInsensitiveSearch];
                 if (range.location == NSNotFound ) {                                     // if we don't find the letter
                     range = [matchword rangeOfString:@"."];                              // see if we have a wild card left
@@ -65,7 +65,7 @@
         
         // add the word to the list if we found one
         if (matchfailed != YES && matchescount<=[field1 length] ) {              
-            wordWithValue = [[WordsClass alloc] initWithWord:[curword substringToIndex:curlength]];
+            wordWithValue = [[WordsClass alloc] initWithWord:[curword substringToIndex:curwordlen]];
             [foundWords addObject:wordWithValue];
         }
         

@@ -63,6 +63,7 @@
     
     FILE *myfile;
     char readword[50];
+    char *ptr;
     
     NSString *ourHome = NSHomeDirectory();
     NSString *wordsFile = [ourHome stringByAppendingPathComponent:@"unScrabbled.app/enable1.txt"];
@@ -70,6 +71,8 @@
     
     myfile = fopen([wordsFile UTF8String], "r");
     while (fgets(readword,sizeof(readword),myfile)) {
+        if( (ptr = strchr(readword, '\n')) != NULL)     // strip the newline if we have one
+            *ptr = '\0';
         [dictionary addObject:[[NSString alloc] initWithUTF8String:readword]];
         //        [dictionary addObject:[[NSString alloc] initWithCString:readword encoding:NSASCIIStringEncoding]];
     }
