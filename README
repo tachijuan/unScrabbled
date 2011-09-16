@@ -33,3 +33,5 @@ todo:
 2) Add option to change dictionaries depending on the game
 3) Persist dictionary change between invocations
 4) regex search of the dictionary without doing a tile matching
+5) use something fancy like a TRIE for word searching
+6) fix various UI poopery (keyboard should launch the search, etc.)
