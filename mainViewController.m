@@ -20,8 +20,8 @@
 {
     if ([[segue identifier] isEqualToString:@"showTable"]) {
         TableViewController *myTableViewController = [segue destinationViewController];
-        myTableViewController.currentword = [tiles text];
-        myTableViewController.regexpattern = [regexstring text];
+        myTableViewController.currentword = [[tiles text] lowercaseString];
+        myTableViewController.regexpattern = [[regexstring text] lowercaseString];
         myTableViewController.maxwordsize = maxwordsize;
         myTableViewController.dictionary = dictionary;
     }
