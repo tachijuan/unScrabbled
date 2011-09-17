@@ -12,6 +12,8 @@
 		0D56F41D1421491D005C5BE7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D56F41C1421491D005C5BE7 /* Default.png */; };
 		0D56F41F14214921005C5BE7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D56F41E14214921005C5BE7 /* Default@2x.png */; };
 		0D5F6B58141DCE3900293832 /* mainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F6B57141DCE3900293832 /* mainViewController.m */; };
+		0D77509E1424403D0057F288 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 0D77509D1424403D0057F288 /* README */; };
+		0D7750A2142441600057F288 /* HelpViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7750A1142441600057F288 /* HelpViewer.m */; };
 		0D7B8807141DD1E100315335 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B8806141DD1E100315335 /* TableViewController.m */; };
 		0D7B881A141E4FBC00315335 /* sowpods.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B8815141E4FBC00315335 /* sowpods.txt */; };
 		0D7B881B141E4FBC00315335 /* enable1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B8816141E4FBC00315335 /* enable1.txt */; };
@@ -34,6 +36,9 @@
 		0D56F41E14214921005C5BE7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0D5F6B56141DCE3900293832 /* mainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mainViewController.h; path = ../mainViewController.h; sourceTree = "<group>"; };
 		0D5F6B57141DCE3900293832 /* mainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mainViewController.m; path = ../mainViewController.m; sourceTree = "<group>"; };
+		0D77509D1424403D0057F288 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
+		0D7750A0142441600057F288 /* HelpViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewer.h; sourceTree = "<group>"; };
+		0D7750A1142441600057F288 /* HelpViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewer.m; sourceTree = "<group>"; };
 		0D7B8805141DD1E100315335 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		0D7B8806141DD1E100315335 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		0D7B8815141E4FBC00315335 /* sowpods.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sowpods.txt; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 			children = (
 				0DEDF780141DC08A00630839 /* GIGAppDelegate.h */,
 				0DEDF781141DC08A00630839 /* GIGAppDelegate.m */,
+				0D77509D1424403D0057F288 /* README */,
 				0D7B8815141E4FBC00315335 /* sowpods.txt */,
 				0D7B8816141E4FBC00315335 /* enable1.txt */,
 				0D7B8817141E4FBC00315335 /* words2 */,
@@ -119,6 +125,8 @@
 				0DEDF786141DC08A00630839 /* GIGViewController.h */,
 				0DEDF787141DC08A00630839 /* GIGViewController.m */,
 				0DEDF778141DC08A00630839 /* Supporting Files */,
+				0D7750A0142441600057F288 /* HelpViewer.h */,
+				0D7750A1142441600057F288 /* HelpViewer.m */,
 			);
 			path = unScrabbled;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 				0D56F41B14214919005C5BE7 /* Juan!RetinaIcon.png in Resources */,
 				0D56F41D1421491D005C5BE7 /* Default.png in Resources */,
 				0D56F41F14214921005C5BE7 /* Default@2x.png in Resources */,
+				0D77509E1424403D0057F288 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +219,7 @@
 				0D5F6B58141DCE3900293832 /* mainViewController.m in Sources */,
 				0D7B8807141DD1E100315335 /* TableViewController.m in Sources */,
 				0D7B881D141E4FBC00315335 /* WordsClass.m in Sources */,
+				0D7750A2142441600057F288 /* HelpViewer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

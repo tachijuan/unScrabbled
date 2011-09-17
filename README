@@ -2,23 +2,11 @@ This is my first attempt at a storyboard based cocoa app.
 
 It's not very optimized, it's not very pretty, but it works.
 
-The basic concept is that the first screen is your input field. You have two inputs: the tiles,
-and a regex field. You can also use a slider to set the maximum size word you are looking for.
-In the tiles field you can use a . (period) as a wild card character. You can then find all the
-matching tiles by hitting the "Do it!" button. The transition to the next view can take a long
-time (second or two) depending on the number of words you match. That's because my algorithm is
-very, very, very simple. The goal of this project was to learn cocoa and not to optimized a
-scrabble / words with frieds cheat program. 
+The basic concept is that the first screen is your input field. You have two inputs: the tiles, and a regex field. You can also use a slider to set the maximum size word you are looking for.  In the tiles field you can use a . (period) as a wild card character. You can then find all the matching tiles by hitting the "Do it!" button. The transition to the next view can take a long time (second or two) depending on the number of words you match. That's because my algorithm is very, very, very simple. The goal of this project was to learn cocoa and not to optimized a scrabble / words with frieds cheat program. 
 
-Once you go to the next scree/view, you are presented with a list of all the words that match.
-You can change the sort order between value based and legth based.
+Once you go to the next scree/view, you are presented with a list of all the words that match.  You can change the sort order between value based and legth based.
 
-I use the regex field to help find matches. If you have a connector tyle, you must add that
-tile to the tiles field. For example, if your tyles are "gykhrto" and you are trying to connect
-to a "c", your tile field should be "gykhrtoc". The make sure that the "c" is used, you should
-use it in the regex field. Valid regex patterns allow you to do cool things like looking for
-words that start with the connector (in our case "^c"), end with the connector ("c$"), have the
-connector as the third letter ("^..c"), etc. 
+I use the regex field to help find matches. If you have a connector tyle, you must add that tile to the tiles field. For example, if your tyles are "gykhrto" and you are trying to connect to a "c", your tile field should be "gykhrtoc". The make sure that the "c" is used, you should use it in the regex field. Valid regex patterns allow you to do cool things like looking for words that start with the connector (in our case "^c"), end with the connector ("c$"), have the connector as the third letter ("^..c"), etc. 
 
 Overall this has helped me beat everyone I've played with.
 
