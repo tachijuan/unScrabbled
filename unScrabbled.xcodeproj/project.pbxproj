@@ -14,6 +14,7 @@
 		0D5F6B58141DCE3900293832 /* mainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5F6B57141DCE3900293832 /* mainViewController.m */; };
 		0D77509E1424403D0057F288 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 0D77509D1424403D0057F288 /* README */; };
 		0D7750A2142441600057F288 /* HelpViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7750A1142441600057F288 /* HelpViewer.m */; };
+		0D7750A5142448620057F288 /* FancyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7750A4142448620057F288 /* FancyViewCell.m */; };
 		0D7B8807141DD1E100315335 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B8806141DD1E100315335 /* TableViewController.m */; };
 		0D7B881A141E4FBC00315335 /* sowpods.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B8815141E4FBC00315335 /* sowpods.txt */; };
 		0D7B881B141E4FBC00315335 /* enable1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B8816141E4FBC00315335 /* enable1.txt */; };
@@ -39,6 +40,8 @@
 		0D77509D1424403D0057F288 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
 		0D7750A0142441600057F288 /* HelpViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewer.h; sourceTree = "<group>"; };
 		0D7750A1142441600057F288 /* HelpViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewer.m; sourceTree = "<group>"; };
+		0D7750A3142448620057F288 /* FancyViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FancyViewCell.h; sourceTree = "<group>"; };
+		0D7750A4142448620057F288 /* FancyViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FancyViewCell.m; sourceTree = "<group>"; };
 		0D7B8805141DD1E100315335 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		0D7B8806141DD1E100315335 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		0D7B8815141E4FBC00315335 /* sowpods.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sowpods.txt; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 				0DEDF783141DC08A00630839 /* MainStoryboard.storyboard */,
 				0D7B8805141DD1E100315335 /* TableViewController.h */,
 				0D7B8806141DD1E100315335 /* TableViewController.m */,
+				0D7750A3142448620057F288 /* FancyViewCell.h */,
+				0D7750A4142448620057F288 /* FancyViewCell.m */,
 				0DEDF786141DC08A00630839 /* GIGViewController.h */,
 				0DEDF787141DC08A00630839 /* GIGViewController.m */,
 				0DEDF778141DC08A00630839 /* Supporting Files */,
@@ -220,6 +225,7 @@
 				0D7B8807141DD1E100315335 /* TableViewController.m in Sources */,
 				0D7B881D141E4FBC00315335 /* WordsClass.m in Sources */,
 				0D7750A2142441600057F288 /* HelpViewer.m in Sources */,
+				0D7750A5142448620057F288 /* FancyViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

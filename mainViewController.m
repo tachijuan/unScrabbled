@@ -96,6 +96,7 @@
 - (IBAction)doItButton:(id)sender {
     [regexstring resignFirstResponder];
     [tiles resignFirstResponder];
+    [self performSegueWithIdentifier:@"showTable" sender:self];
     
 }
 

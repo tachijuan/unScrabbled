@@ -124,7 +124,7 @@
     wordResults = [[NSMutableArray alloc] init];
     [self findMyWords];
 //    NSLog(@"dictionary size: %d, words matched:%d",[dictionary count],[wordResults count]);
-    self.tableView.rowHeight=25;
+//    self.tableView.rowHeight=25;
 }
 
 - (void)viewDidUnload
@@ -148,7 +148,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//    return [possesions count];
     return [wordResults count]+1;
 }
 
@@ -157,22 +156,30 @@
     //    UITableViewCell *cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
     //                                                    reuseIdentifier:@"UITableViewCell"] autorelease];
     //    
+    NSInteger row = indexPath.row;
+//    NSLog(@"row: %d",row);
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myWordCell"];
+    FancyViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myFancyWordCell"];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2
-                 reuseIdentifier:@"myWordCell"];
+        cell = [[FancyViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                 reuseIdentifier:@"myFancyWordCell"];
     }
     
-    NSInteger row = indexPath.row;
     if (row == 0) {
-        cell.textLabel.text = [NSString stringWithFormat:@"Words (total:%d)",[wordResults count]];
-        cell.detailTextLabel.text =@"Value";
+        cell.wordNameLabel.text = [NSString stringWithFormat:@"Words (total:%d)",[wordResults count]];
+        cell.wordValueLabel.text =@"Value";
     } else {
-        cell.textLabel.text = [[[wordResults objectAtIndex:row-1] word] lowercaseString];
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%i",[[wordResults objectAtIndex:row-1] wordValue]];
+        cell.wordNameLabel.text = [[[wordResults objectAtIndex:row-1] word] lowercaseString];
+        cell.wordValueLabel.text = [NSString stringWithFormat:@"%i",[[wordResults objectAtIndex:row-1] wordValue]];
     }
+    //    if (row == 0) {
+//        cell.textLabel.text = [NSString stringWithFormat:@"Words (total:%d)",[wordResults count]];
+//        cell.detailTextLabel.text =@"Value";
+//    } else {
+//        cell.textLabel.text = [[[wordResults objectAtIndex:row-1] word] lowercaseString];
+//        cell.detailTextLabel.text = [NSString stringWithFormat:@"%i",[[wordResults objectAtIndex:row-1] wordValue]];
+//    }
     
 //    CGRect frame = cell.accessoryView.bounds;
 //    UILabel *myLabel = [[UILabel alloc] initWithFrame:frame];
