@@ -16,6 +16,13 @@
 @synthesize maxwordsize;
 @synthesize dictionary;
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
+{
+    if ([[segue identifier] isEqualToString:@"defineTheWord"]) {
+        DefinitionViewController *myTableViewController = [segue destinationViewController];
+        myTableViewController.wordToSend = [wordResults objectAtIndex:[self.tableView indexPathForSelectedRow].row-1];
+    }
+}
 
 #pragma mark - The code for the searching thing
 
@@ -146,6 +153,7 @@
     return 1;
 }
 
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [wordResults count]+1;
@@ -173,18 +181,7 @@
         cell.wordNameLabel.text = [[[wordResults objectAtIndex:row-1] word] lowercaseString];
         cell.wordValueLabel.text = [NSString stringWithFormat:@"%i",[[wordResults objectAtIndex:row-1] wordValue]];
     }
-    //    if (row == 0) {
-//        cell.textLabel.text = [NSString stringWithFormat:@"Words (total:%d)",[wordResults count]];
-//        cell.detailTextLabel.text =@"Value";
-//    } else {
-//        cell.textLabel.text = [[[wordResults objectAtIndex:row-1] word] lowercaseString];
-//        cell.detailTextLabel.text = [NSString stringWithFormat:@"%i",[[wordResults objectAtIndex:row-1] wordValue]];
-//    }
-    
-//    CGRect frame = cell.accessoryView.bounds;
-//    UILabel *myLabel = [[UILabel alloc] initWithFrame:frame];
-//    myLabel.text = [NSString stringWithFormat:@"%i",maxwordsize];
-//    [cell.accessoryView addSubview:myLabel];
+
     
     return cell;
 }

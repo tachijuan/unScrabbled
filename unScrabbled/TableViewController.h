@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FancyViewCell.h"
+#import "DefinitionViewController.h"
 
 NSMutableArray *wordResults;
 

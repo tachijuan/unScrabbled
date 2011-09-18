@@ -20,6 +20,7 @@
 		0D7B881B141E4FBC00315335 /* enable1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B8816141E4FBC00315335 /* enable1.txt */; };
 		0D7B881C141E4FBC00315335 /* words2 in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B8817141E4FBC00315335 /* words2 */; };
 		0D7B881D141E4FBC00315335 /* WordsClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B8819141E4FBC00315335 /* WordsClass.m */; };
+		0DD19D761425CBB40002187A /* DefinitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DD19D751425CBB40002187A /* DefinitionViewController.m */; };
 		0DEDF772141DC08A00630839 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DEDF771141DC08A00630839 /* UIKit.framework */; };
 		0DEDF774141DC08A00630839 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DEDF773141DC08A00630839 /* Foundation.framework */; };
 		0DEDF776141DC08A00630839 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DEDF775141DC08A00630839 /* CoreGraphics.framework */; };
@@ -49,6 +50,8 @@
 		0D7B8817141E4FBC00315335 /* words2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words2; sourceTree = "<group>"; };
 		0D7B8818141E4FBC00315335 /* WordsClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordsClass.h; sourceTree = "<group>"; };
 		0D7B8819141E4FBC00315335 /* WordsClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordsClass.m; sourceTree = "<group>"; };
+		0DD19D741425CBB40002187A /* DefinitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefinitionViewController.h; sourceTree = "<group>"; };
+		0DD19D751425CBB40002187A /* DefinitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefinitionViewController.m; sourceTree = "<group>"; };
 		0DEDF76D141DC08A00630839 /* unScrabbled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unScrabbled.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DEDF771141DC08A00630839 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0DEDF773141DC08A00630839 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -112,6 +115,8 @@
 		0DEDF777141DC08A00630839 /* unScrabbled */ = {
 			isa = PBXGroup;
 			children = (
+				0DD19D741425CBB40002187A /* DefinitionViewController.h */,
+				0DD19D751425CBB40002187A /* DefinitionViewController.m */,
 				0DEDF780141DC08A00630839 /* GIGAppDelegate.h */,
 				0DEDF781141DC08A00630839 /* GIGAppDelegate.m */,
 				0D77509D1424403D0057F288 /* README */,
@@ -226,6 +231,7 @@
 				0D7B881D141E4FBC00315335 /* WordsClass.m in Sources */,
 				0D7750A2142441600057F288 /* HelpViewer.m in Sources */,
 				0D7750A5142448620057F288 /* FancyViewCell.m in Sources */,
+				0DD19D761425CBB40002187A /* DefinitionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
