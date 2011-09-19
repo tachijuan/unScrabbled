@@ -45,8 +45,7 @@
     [super viewDidLoad];
     
     NSString *wordToShow = [[wordToSend word] lowercaseString];
-    NSString *tmpString = [NSString stringWithFormat:@"%@%@",@"http://orlandini.us/cgi-bin/dict.cgi?word=",wordToShow];
-            
+    NSString *tmpString = [NSString stringWithFormat:@"%@%@",@"http://gigantical.com/cgi-bin/dict.cgi?word=",wordToShow];            
     NSString *wordfield99 = [NSString stringWithContentsOfURL:[NSURL URLWithString:tmpString] encoding:NSUTF8StringEncoding error:nil];
     
     [definitionView setText:wordfield99];
