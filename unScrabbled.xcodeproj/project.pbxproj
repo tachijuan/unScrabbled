@@ -32,10 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D56F41714214915005C5BE7 /* Juan!Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Juan!Icon.png"; sourceTree = "<group>"; };
-		0D56F41A14214919005C5BE7 /* Juan!RetinaIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Juan!RetinaIcon.png"; sourceTree = "<group>"; };
-		0D56F41C1421491D005C5BE7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		0D56F41E14214921005C5BE7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0D56F41714214915005C5BE7 /* Juan!Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Juan!Icon.png"; path = "../Juan!Icon.png"; sourceTree = "<group>"; };
+		0D56F41A14214919005C5BE7 /* Juan!RetinaIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Juan!RetinaIcon.png"; path = "../Juan!RetinaIcon.png"; sourceTree = "<group>"; };
+		0D56F41C1421491D005C5BE7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		0D56F41E14214921005C5BE7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		0D5F6B56141DCE3900293832 /* mainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mainViewController.h; path = ../mainViewController.h; sourceTree = "<group>"; };
 		0D5F6B57141DCE3900293832 /* mainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = mainViewController.m; path = ../mainViewController.m; sourceTree = "<group>"; };
 		0D77509D1424403D0057F288 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
@@ -81,13 +81,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DE7FEF11426CCCB00307876 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D7750A0142441600057F288 /* HelpViewer.h */,
+				0D7750A1142441600057F288 /* HelpViewer.m */,
+				0DD19D741425CBB40002187A /* DefinitionViewController.h */,
+				0DD19D751425CBB40002187A /* DefinitionViewController.m */,
+				0D5F6B56141DCE3900293832 /* mainViewController.h */,
+				0D5F6B57141DCE3900293832 /* mainViewController.m */,
+				0D7B8805141DD1E100315335 /* TableViewController.h */,
+				0D7B8806141DD1E100315335 /* TableViewController.m */,
+				0DEDF786141DC08A00630839 /* GIGViewController.h */,
+				0DEDF787141DC08A00630839 /* GIGViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0DE7FEF31426CCE300307876 /* Text files */ = {
+			isa = PBXGroup;
+			children = (
+				0D77509D1424403D0057F288 /* README */,
+				0D7B8815141E4FBC00315335 /* sowpods.txt */,
+				0D7B8816141E4FBC00315335 /* enable1.txt */,
+				0D7B8817141E4FBC00315335 /* words2 */,
+			);
+			name = "Text files";
+			sourceTree = "<group>";
+		};
+		0DE7FEF41426CD2000307876 /* Support Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0D7B8818141E4FBC00315335 /* WordsClass.h */,
+				0D7B8819141E4FBC00315335 /* WordsClass.m */,
+				0D7750A3142448620057F288 /* FancyViewCell.h */,
+				0D7750A4142448620057F288 /* FancyViewCell.m */,
+			);
+			name = "Support Classes";
+			sourceTree = "<group>";
+		};
 		0DEDF762141DC08A00630839 = {
 			isa = PBXGroup;
 			children = (
-				0D56F41E14214921005C5BE7 /* Default@2x.png */,
-				0D56F41C1421491D005C5BE7 /* Default.png */,
-				0D56F41A14214919005C5BE7 /* Juan!RetinaIcon.png */,
-				0D56F41714214915005C5BE7 /* Juan!Icon.png */,
 				0DEDF777141DC08A00630839 /* unScrabbled */,
 				0DEDF770141DC08A00630839 /* Frameworks */,
 				0DEDF76E141DC08A00630839 /* Products */,
@@ -115,28 +150,13 @@
 		0DEDF777141DC08A00630839 /* unScrabbled */ = {
 			isa = PBXGroup;
 			children = (
-				0DD19D741425CBB40002187A /* DefinitionViewController.h */,
-				0DD19D751425CBB40002187A /* DefinitionViewController.m */,
+				0DE7FEF31426CCE300307876 /* Text files */,
+				0DE7FEF11426CCCB00307876 /* View Controllers */,
+				0DEDF778141DC08A00630839 /* Supporting Files */,
+				0DE7FEF41426CD2000307876 /* Support Classes */,
 				0DEDF780141DC08A00630839 /* GIGAppDelegate.h */,
 				0DEDF781141DC08A00630839 /* GIGAppDelegate.m */,
-				0D77509D1424403D0057F288 /* README */,
-				0D7B8815141E4FBC00315335 /* sowpods.txt */,
-				0D7B8816141E4FBC00315335 /* enable1.txt */,
-				0D7B8817141E4FBC00315335 /* words2 */,
-				0D7B8818141E4FBC00315335 /* WordsClass.h */,
-				0D7B8819141E4FBC00315335 /* WordsClass.m */,
-				0D5F6B56141DCE3900293832 /* mainViewController.h */,
-				0D5F6B57141DCE3900293832 /* mainViewController.m */,
 				0DEDF783141DC08A00630839 /* MainStoryboard.storyboard */,
-				0D7B8805141DD1E100315335 /* TableViewController.h */,
-				0D7B8806141DD1E100315335 /* TableViewController.m */,
-				0D7750A3142448620057F288 /* FancyViewCell.h */,
-				0D7750A4142448620057F288 /* FancyViewCell.m */,
-				0DEDF786141DC08A00630839 /* GIGViewController.h */,
-				0DEDF787141DC08A00630839 /* GIGViewController.m */,
-				0DEDF778141DC08A00630839 /* Supporting Files */,
-				0D7750A0142441600057F288 /* HelpViewer.h */,
-				0D7750A1142441600057F288 /* HelpViewer.m */,
 			);
 			path = unScrabbled;
 			sourceTree = "<group>";
@@ -144,6 +164,10 @@
 		0DEDF778141DC08A00630839 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0D56F41E14214921005C5BE7 /* Default@2x.png */,
+				0D56F41C1421491D005C5BE7 /* Default.png */,
+				0D56F41A14214919005C5BE7 /* Juan!RetinaIcon.png */,
+				0D56F41714214915005C5BE7 /* Juan!Icon.png */,
 				0DEDF779141DC08A00630839 /* unScrabbled-Info.plist */,
 				0DEDF77A141DC08A00630839 /* InfoPlist.strings */,
 				0DEDF77D141DC08A00630839 /* main.m */,

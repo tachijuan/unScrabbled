@@ -109,22 +109,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="unScrabbled" id="Iwe-7P-aLr">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="RzC-4t-0CQ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xM8-sR-aLm">
-                                <rect key="frame" x="271" y="12" width="44" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="?">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vjd-TF-Nst" kind="push" id="0X3-ex-L9j"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="NXw-6P-C1t">
+                            <connections>
+                                <segue destination="vjd-TF-Nst" kind="push" identifier="ShowHelp" id="zFn-FS-onB"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -162,7 +150,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="978" y="-464"/>
+            <point key="canvasLocation" x="1538" y="-276"/>
         </scene>
         <scene sceneID="nR2-LB-nrb">
             <objects>
@@ -222,6 +210,11 @@
                                 <action selector="sortSelectorChanged:" destination="NCC-Yn-DCV" eventType="valueChanged" id="FUJ-Ma-Pzi"/>
                             </connections>
                         </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="08O-Hv-jFn">
+                            <connections>
+                                <segue destination="vjd-TF-Nst" kind="push" identifier="ShowHelp" id="Dzk-rR-LNO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="sortSelector" destination="Wy7-Ym-J5D" id="Pff-Ct-p5y"/>
@@ -262,12 +255,55 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1413" y="389"/>
+            <point key="canvasLocation" x="1557" y="625"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DefinitionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DefinitionViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bigWordLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="definitionView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="FancyViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FancyViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="wordNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="wordValueLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="HelpViewer" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HelpViewer.h"/>
+            <relationships>
+                <relationship kind="outlet" name="helpViewer" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="TableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sortSelectorChanged:"/>
+                <relationship kind="outlet" name="sortSelector" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="mainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/mainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doItButton:"/>
+                <relationship kind="action" name="maxWordLengthSlider:"/>
+                <relationship kind="outlet" name="maxWordLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="maxWordLengthSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="regexstring" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tiles" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dzk-rR-LNO"/>
+    </inferredMetricsTieBreakers>
 </document>
