@@ -10,6 +10,7 @@
 
 @implementation HelpViewer
 @synthesize helpViewer;
+@synthesize swipe;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,9 +50,21 @@
 //    NSLog(@"Path: %@",helpFile);
     myHelpContent = [NSString stringWithContentsOfFile:helpFile encoding:NSASCIIStringEncoding error:NULL];
     [helpViewer setText:myHelpContent];
+    
+    UIGestureRecognizer *recognizer;
+    
+    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    self.swipe = (UISwipeGestureRecognizer *)recognizer;
+    swipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:recognizer];
 
 }
 
+- (void)handleSwipe:(UISwipeGestureRecognizer *)recognizer {
+//    NSLog(@"got recognizer");
+    [[self navigationController] popViewControllerAnimated:YES];
+    
+}
 
 - (void)viewDidUnload
 {

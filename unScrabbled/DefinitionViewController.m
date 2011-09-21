@@ -12,6 +12,7 @@
 @synthesize definitionView;
 @synthesize wordToSend;
 @synthesize bigWordLabel;
+@synthesize swipe;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,8 +51,25 @@
     
     [definitionView setText:wordfield99];
     [bigWordLabel setText:wordToShow];
+    
+  
+    // recognize swipe left to get out of the definition view
+    UIGestureRecognizer *recognizer;
+    
+    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    self.swipe = (UISwipeGestureRecognizer *)recognizer;
+    swipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:recognizer];
+
 
 }
+
+- (void)handleSwipe:(UISwipeGestureRecognizer *)recognizer {
+//    NSLog(@"got recognizer");
+    [[self navigationController] popViewControllerAnimated:YES];
+  
+}
+
 
 - (void)viewDidUnload
 {

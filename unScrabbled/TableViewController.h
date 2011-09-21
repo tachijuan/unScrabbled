@@ -12,14 +12,18 @@
 
 NSMutableArray *wordResults;
 
-@interface TableViewController : UITableViewController {
+@interface TableViewController : UITableViewController <UIGestureRecognizerDelegate> {
     IBOutlet UISegmentedControl *sortSelector;
+    UISwipeGestureRecognizer *swipe;
+
 }
 
 @property (retain) NSString *currentword;
 @property (retain) NSString *regexpattern;
 @property int maxwordsize;
 @property (retain) NSMutableArray *dictionary;
+@property (nonatomic, retain) UISwipeGestureRecognizer *swipe;
+
 
 - (IBAction)sortSelectorChanged:(id)sender;
 

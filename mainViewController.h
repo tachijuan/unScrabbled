@@ -11,14 +11,18 @@
 int maxwordsize;
 NSMutableArray *dictionary;
 
-@interface mainViewController : UIViewController {
+@interface mainViewController : UIViewController <UIGestureRecognizerDelegate> {
     UIButton *doIt;
     UITextField *tiles;
     UITextField *regexstring;
     IBOutlet UISlider *maxWordLengthSlider;
     IBOutlet UILabel *maxWordLabel;
+    
+    UISwipeGestureRecognizer *swipe;
+
 }
 
+@property (nonatomic, retain) UISwipeGestureRecognizer *swipe;
 @property (nonatomic, retain) IBOutlet UITextField *tiles;
 @property (nonatomic, retain) IBOutlet UITextField *regexstring;
 @property (nonatomic, retain) IBOutlet UISlider *maxWordLengthSlider;

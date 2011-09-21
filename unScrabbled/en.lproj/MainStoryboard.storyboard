@@ -133,7 +133,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="dQD-Wq-nSp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="dQD-Wq-nSp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -235,6 +235,7 @@
                                 <rect key="frame" x="0.0" y="53" width="320" height="363"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textView>
@@ -258,46 +259,6 @@
             <point key="canvasLocation" x="1557" y="625"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="DefinitionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DefinitionViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bigWordLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="definitionView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="FancyViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FancyViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="wordNameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="wordValueLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="HelpViewer" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HelpViewer.h"/>
-            <relationships>
-                <relationship kind="outlet" name="helpViewer" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="TableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="sortSelectorChanged:"/>
-                <relationship kind="outlet" name="sortSelector" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="mainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/mainViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doItButton:"/>
-                <relationship kind="action" name="maxWordLengthSlider:"/>
-                <relationship kind="outlet" name="maxWordLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="maxWordLengthSlider" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="regexstring" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="tiles" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

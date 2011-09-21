@@ -14,6 +14,7 @@
 @synthesize tiles;
 @synthesize regexstring;
 @synthesize maxWordLengthSlider;
+@synthesize swipe;
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
@@ -77,7 +78,14 @@
         //        [dictionary addObject:[[NSString alloc] initWithCString:readword encoding:NSASCIIStringEncoding]];
     }
     
-//    NSLog(@"Loaded words: %d",[dictionary count]);    
+//    NSLog(@"Loaded words: %d",[dictionary count]);   
+    UIGestureRecognizer *recognizer;
+    
+    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    self.swipe = (UISwipeGestureRecognizer *)recognizer;
+    swipe.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:recognizer];
+    
 }
 
 - (void)viewDidUnload
@@ -98,6 +106,16 @@
     [tiles resignFirstResponder];
     [self performSegueWithIdentifier:@"showTable" sender:self];
     
+}
+
+- (void)handleSwipe:(UISwipeGestureRecognizer *)recognizer {
+    //    NSLog(@"got recognizer");
+    [regexstring resignFirstResponder];
+    [tiles resignFirstResponder];
+    if ([tiles text] != nil) {
+        NSLog(@"string:%@:",[tiles text]);
+        [self performSegueWithIdentifier:@"showTable" sender:self];
+    }
 }
 
 

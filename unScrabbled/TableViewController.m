@@ -15,6 +15,7 @@
 @synthesize regexpattern;
 @synthesize maxwordsize;
 @synthesize dictionary;
+@synthesize swipe;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
 {
@@ -132,6 +133,20 @@
     [self findMyWords];
 //    NSLog(@"dictionary size: %d, words matched:%d",[dictionary count],[wordResults count]);
 //    self.tableView.rowHeight=25;
+    
+    UIGestureRecognizer *recognizer;
+    
+    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    self.swipe = (UISwipeGestureRecognizer *)recognizer;
+    swipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:recognizer];
+
+}
+
+- (void)handleSwipe:(UISwipeGestureRecognizer *)recognizer {
+    //    NSLog(@"got recognizer");
+    [[self navigationController] popViewControllerAnimated:YES];
+    
 }
 
 - (void)viewDidUnload

@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HelpViewer : UIViewController {
+@interface HelpViewer : UIViewController <UIGestureRecognizerDelegate> {
 
     IBOutlet UITextView *helpViewer;
+    
+    UISwipeGestureRecognizer *swipe;
+
 }
 
+@property (nonatomic, retain) UISwipeGestureRecognizer *swipe;
 @property (retain, nonatomic) IBOutlet UITextView *helpViewer;
 
 @end
